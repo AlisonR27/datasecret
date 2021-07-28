@@ -1,0 +1,124 @@
+:root {
+  --dark-blue:#050726;
+  --red: ;
+}
+html,body {
+  font-family: 'Mulish', sans-serif !important;
+  background-color: var(--dark-blue);
+}
+.navbar .nav-link {
+  font-weight: 600;
+}
+.z-3 {
+  z-index:3;
+}
+.z-2 {
+  z-index:2;
+}
+.z-4 {
+  z-index:4;
+}
+.container {
+  width: 90% !important;
+}
+.navbar {
+  margin-top:60px !important;
+  box-sizing:border-box;
+  font-size:16pt;
+}
+.banner-bg {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  z-index: 1;
+}
+section > .title {
+  font-size:36pt;
+  font-weight: 800;
+  position: relative;
+}
+section > .title::before {
+  content: '';
+  width: 60px;
+  height:4px;
+  bottom: 0;
+  position: absolute;
+  background:white;
+}
+section.bg-white > .title::before{
+  background: var(--dark-blue) !important;
+}
+*.bg-white > h1 {
+  color: var(--dark-blue);
+}
+*.bg-white p {
+  color: var(--dark);
+}
+.text-darkblue {
+  color: var(--dark-blue) !important;
+}
+.glider-dot {
+  width: 18px !important;
+  height:18px !important;
+}
+.glider-dot.active {
+  background: white !important;
+}
+:not(.bg-white) * {
+  color:#fff;
+}
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4 {
+  color:var(--dark-blue);
+}
+.btn-dblue {
+  background:var(--dark-blue);
+  color:white;
+}
+*:not(.bg-white) li a  {
+  color: rgb(218, 218, 218) !important;
+}
+*:not(.bg-white) li a:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+.glider-dot:not(.active) {
+  background:transparent;
+  border:2px solid white;
+}
+section#servicos .card h2 {
+  font-weight:bold;
+  color:#666666;
+}
+section {
+  padding: 60px 0;
+}
+section#servicos .card .card-header h2::before {
+  content:attr(index);
+  color:var(--dark-blue);
+  font-weight: bold;
+}
+section#servicos .card .nav-link {
+  color: var(--dark-blue);
+}
+section#servicos .card .nav-link:hover{
+  text-decoration: underline;
+}
+
+@media only screen and (min-width:1200px) {
+  section {
+    padding: 100px 0;
+  }
+  .container {
+    width: calc(100% - 260px) !important;
+  }
+  section#banner .content {
+    z-index: 5;
+    width:100%;
+    height:380px;
+  }
+  .navbar {
+    margin-top:100px !important;
+    box-sizing:border-box;
+    font-size:16pt;
+  }
+}
